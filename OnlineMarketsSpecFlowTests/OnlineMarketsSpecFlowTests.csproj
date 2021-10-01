@@ -5,11 +5,19 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="ConfigFiles\CITILINK.json" />
     <None Remove="ConfigFiles\DNS.json" />
+    <None Remove="ConfigFiles\ELDORADO.json" />
   </ItemGroup>
 
   <ItemGroup>
+    <Content Include="ConfigFiles\CITILINK.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="ConfigFiles\DNS.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ConfigFiles\ELDORADO.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
