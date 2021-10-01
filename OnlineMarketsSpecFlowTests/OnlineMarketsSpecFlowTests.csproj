@@ -8,6 +8,7 @@
     <None Remove="ConfigFiles\CITILINK.json" />
     <None Remove="ConfigFiles\DNS.json" />
     <None Remove="ConfigFiles\ELDORADO.json" />
+    <None Remove="ConfigFiles\WILDBERRIES.json" />
   </ItemGroup>
 
   <ItemGroup>
@@ -18,6 +19,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="ConfigFiles\ELDORADO.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ConfigFiles\WILDBERRIES.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
