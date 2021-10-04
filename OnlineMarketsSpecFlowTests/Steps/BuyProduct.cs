@@ -38,5 +38,41 @@ namespace OnlineMarketsSpecFlowTests.Steps
             wait.Until(ExpectedConditions.ElementToBeClickable(By.XPath(website.Pages.StartPage.SearchField))).SendKeys(itemForSearch + Keys.Enter);
         }
 
+        [When(@"I click on first product in the search results on the product list page")]
+        public void WhenIClickOnFirstProductInTheSearchResultsOnTheProductListPage()
+        {
+            wait.Until(ExpectedConditions.ElementToBeClickable(By.XPath(website.Pages.ProductListPage.SelectedItem))).Click();
+        }
+
+        [When(@"I get product name from product details page and put it in scenario context by name '(.*)'")]
+        public void WhenIGetProductNameFromProductDetailsPageAndPutItInScenarioContextByName(string _expectedResult)
+        {
+            string expectedResult = wait.Until(ExpectedConditions.ElementToBeClickable(By.XPath(website.Pages.ProductDetailsPage.NameOfItem))).
+    Text.ToLower().Replace(",", string.Empty);
+            _scenarioContext[_expectedResult] = expectedResult;
+        }
+
+        [When(@"I click on buy button on the product details page")]
+
+        public void WhenIClickOnBuyButtonOnTheProductDetailsPage()
+        {
+            wait.Until(ExpectedConditions.ElementToBeClickable(By.XPath(website.Pages.ProductDetailsPage.AddToBasketButton))).Click();
+        }
+
+        [When(@"I click on basket button on the product details page")]
+        public void WhenIClickOnBasketButtonOnTheProductDetailsPage()
+        {
+            wait.Until(ExpectedConditions.ElementToBeClickable(By.XPath(website.Pages.ProductDetailsPage.BasketButton))).Click();
+        }
+
+        [When(@"I get product name from basket page and put it in scenario context by name '(.*)'")]
+        public void WhenIGetProductNameFromBasketPageAndPutItInScenarioContextByName(string _actualResult)
+        {
+            var actualResult = wait.Until(ExpectedConditions.ElementToBeClickable(By.XPath(website.Pages.BasketPage.NameOfItem))).
+    Text.ToLower().Replace(",", string.Empty);
+            _scenarioContext[_actualResult] = actualResult;
+        }
+
+
     }
 }

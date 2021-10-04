@@ -6,7 +6,7 @@
     },
 
     "ProductListPage": {
-      "SelectedItem": "//span[contains(text(), 'iPhone 11')]"
+      "SelectedItem": "//div[@data-id='product'][1]"
     },
 
     "ProductDetailsPage": {
