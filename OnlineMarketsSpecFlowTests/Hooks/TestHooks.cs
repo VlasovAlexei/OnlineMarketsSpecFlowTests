@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using System.IO;
 using System.Linq;
@@ -28,6 +29,7 @@ namespace OnlineMarketsSpecFlowTests.Hooks
             ChromeOptions option = new ChromeOptions();
             option.AddArguments("start-maximized");
             option.AddArguments("--disable-notifications");
+            option.PageLoadStrategy = PageLoadStrategy.Eager;
             _driverHelper.Driver = new ChromeDriver(option);
         }
 
