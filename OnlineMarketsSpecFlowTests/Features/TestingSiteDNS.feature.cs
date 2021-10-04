@@ -121,6 +121,10 @@ testRunner.When("I click on search field and enter the product to search \"iPhon
 #line 7
 testRunner.And("I click on first product in the search results on the product list page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
+#line 8
+testRunner.And("I get product name from product details page and put it in scenario context by na" +
+                        "me \'productNameFromDetailsPage\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
             }
             this.ScenarioCleanup();
         }

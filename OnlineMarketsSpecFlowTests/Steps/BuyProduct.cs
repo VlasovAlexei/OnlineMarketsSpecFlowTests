@@ -44,6 +44,13 @@ namespace OnlineMarketsSpecFlowTests.Steps
             wait.Until(ExpectedConditions.ElementToBeClickable(By.XPath(website.Pages.ProductListPage.SelectedItem))).Click();
         }
 
+        [When(@"I get product name from product details page and put it in scenario context by name '(.*)'")]
+        public void WhenIGetProductNameFromProductDetailsPageAndPutItInScenarioContextByName(string _expectedResult)
+        {
+            string expectedResult = wait.Until(ExpectedConditions.ElementToBeClickable(By.XPath(website.Pages.ProductDetailsPage.NameOfItem))).
+    Text.ToLower().Replace(",", string.Empty);
+            _scenarioContext[_expectedResult] = expectedResult;
+        }
 
     }
 }
