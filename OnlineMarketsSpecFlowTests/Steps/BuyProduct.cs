@@ -1,12 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using TechTalk.SpecFlow;
+using OnlineMarketsSpecFlowTests.Hooks;
 
 namespace OnlineMarketsSpecFlowTests.Steps
 {
-    class Class1
+    [Binding]
+    public class BuyProduct
     {
+        private DriverHelper _driverHelper;
+
+        public BuyProduct(DriverHelper driverHelper)
+        {
+            _driverHelper = driverHelper;
+        }
     }
 }
