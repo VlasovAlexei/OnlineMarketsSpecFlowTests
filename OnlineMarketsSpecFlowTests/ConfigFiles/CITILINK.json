@@ -1,10 +1,22 @@
 {
-  "UrlAdress": "https://www.citilink.ru/",
-  "SearchField": "//div[@class='MainHeader__search']//input[@type = 'search']",
-  "SearchButton": "//div[@class='MainHeader__search']//button[@type = 'submit']",
-  "SelectedItemInSearch": "//div[@class='ProductCardVertical__description ']",
-  "NameOfItem": "//h1[@class = 'Heading Heading_level_1 ProductHeader__title']",
-  "AddToBasketButton": "//div[@class ='ProductHeader__buy-block']//span[@class='Button__text jsButton__text']",
-  "BasketButton": "//button[@class='UpsaleBasket__order Button jsButton Button_theme_primary Button_size_m']",
-  "ItemInBasket": "//a[@class='ProductCardForBasket__name Link js--Link Link_type_default']"
+  "Url": "https://www.citilink.ru/",
+  "Pages": {
+    "StartPage": {
+      "SearchField": "//div[@class='MainHeader__search']//input[@type = 'search']"
+    },
+
+    "ProductListPage": {
+      "SelectedItem": "//div[@class='ProductCardVertical__description ']"
+    },
+
+    "ProductDetailsPage": {
+      "NameOfItem": "//h1[@class = 'Heading Heading_level_1 ProductHeader__title']",
+      "AddToBasketButton": "//div[@class ='ProductHeader__buy-block']//span[@class='Button__text jsButton__text']",
+      "BasketButton": "//button[@class='UpsaleBasket__order Button jsButton Button_theme_primary Button_size_m']"
+    },
+
+    "BasketPage": {
+      "NameOfItem": "//a[@class='ProductCardForBasket__name Link js--Link Link_type_default']"
+    }
+  }
 }
