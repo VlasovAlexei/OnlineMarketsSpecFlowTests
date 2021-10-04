@@ -3,6 +3,7 @@ using OnlineMarketsSpecFlowTests.Hooks;
 using System.Linq;
 using OpenQA.Selenium.Support.UI;
 using System;
+using OpenQA.Selenium;
 
 namespace OnlineMarketsSpecFlowTests.Steps
 {
@@ -29,6 +30,12 @@ namespace OnlineMarketsSpecFlowTests.Steps
         public void GivenINavigateToTheWebsiteStartPage()
         {
             _driverHelper.Driver.Navigate().GoToUrl(website.Url);
+        }
+
+        [When(@"I click on search field and enter the product to search ""(.*)"" on the start page")]
+        public void WhenIClickOnSearchFieldAndEnterTheProductToSearchOnTheStartPage(string itemForSearch)
+        {
+            wait.Until(ExpectedConditions.ElementToBeClickable(By.XPath(website.Pages.StartPage.SearchField))).SendKeys(itemForSearch + Keys.Enter);
         }
 
     }
