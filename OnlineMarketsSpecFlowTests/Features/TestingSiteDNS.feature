@@ -9,3 +9,4 @@ Scenario: BuyOfOneProduct
 	And I click on buy button on the product details page
 	And I click on basket button on the product details page
 	And I get product name from basket page and put it in scenario context by name 'productNameFromBasketPage'
+	Then I validate count of selected product in basket is '1'

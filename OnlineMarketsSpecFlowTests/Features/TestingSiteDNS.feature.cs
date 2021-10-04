@@ -135,6 +135,9 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.And("I get product name from basket page and put it in scenario context by name \'produ" +
                         "ctNameFromBasketPage\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
+#line 12
+ testRunner.Then("I validate count of selected product in basket is \'1\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
             }
             this.ScenarioCleanup();
         }
