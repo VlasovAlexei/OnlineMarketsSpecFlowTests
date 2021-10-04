@@ -1,10 +1,27 @@
 {
-  "UrlAdress": "https://www.eldorado.ru/",
-  "SearchField": "//input[@name= 'search']",
-  "SearchButton": "//button [@type = 'submit']",
-  "SelectedItemInSearch": "//a[@data-dy='title']",
-  "NameOfItem": "//h1[@itemprop='name']",
-  "AddToBasketButton": "//div[@class ='priceContainer']//span[@class = 'gtmAddToBasket addToCartBigCP cartButtonText']",
-  "BasketButton": "//div[@class ='dy-modal-wrapper']//a[@href = '/personal/basket.php']",
-  "ItemInBasket": "//a[@class ='basketBlockCels_nameProdItemLink q-basketBlockCels_nameProdItemLink']"
+  "Url": "https://www.eldorado.ru/",
+  "Pages": 
+  {
+    "StartPage": 
+    {
+      "SearchField": "//input[@name= 'search']"
+    },
+
+    "ProductListPage": 
+    {
+      "SelectedItem": "//a[@data-dy='title']"
+    },
+
+    "ProductDetailsPage": 
+    {
+      "NameOfItem": "//h1[@itemprop='name']",
+      "AddToBasketButton": "//div[@class ='priceContainer']//span[@class = 'gtmAddToBasket addToCartBigCP cartButtonText']",
+      "BasketButton": "//div[@class ='dy-modal-wrapper']//a[@href = '/personal/basket.php']"
+    },
+
+    "BasketPage": 
+    {
+      "NameOfItem": "//a[@class ='basketBlockCels_nameProdItemLink q-basketBlockCels_nameProdItemLink']"
+    }
+  }
 }
