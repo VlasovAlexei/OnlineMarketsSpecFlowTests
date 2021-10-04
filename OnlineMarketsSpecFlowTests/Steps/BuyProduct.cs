@@ -1,6 +1,8 @@
 ﻿using TechTalk.SpecFlow;
 using OnlineMarketsSpecFlowTests.Hooks;
 using System.Linq;
+using OpenQA.Selenium.Support.UI;
+using System;
 
 namespace OnlineMarketsSpecFlowTests.Steps
 {
@@ -11,6 +13,7 @@ namespace OnlineMarketsSpecFlowTests.Steps
         private Website website;
         private readonly ScenarioContext _scenarioContext;
         private readonly FeatureContext _featureContext;
+        private WebDriverWait wait;
 
         public BuyProduct(DriverHelper driverHelper, ScenarioContext scenarioContext, FeatureContext featureContext)
         {
@@ -19,6 +22,7 @@ namespace OnlineMarketsSpecFlowTests.Steps
             _featureContext = featureContext;
             var tagInfo = _featureContext.FeatureInfo.Tags.First();
             website = (Website)_featureContext[tagInfo];
+            wait = new WebDriverWait(driverHelper.Driver, TimeSpan.FromSeconds(10));
         }
     }
 }
