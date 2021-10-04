@@ -10,4 +10,4 @@ Scenario: BuyOfOneProduct
 	And I click on basket button on the product details page
 	And I get product name from basket page and put it in scenario context by name 'productNameFromBasketPage'
 	Then I validate count of selected product in basket is '1'
-	Then I validate two scenario contexts have equal text 'productNameFromProductPage', 'productNameFromBasketPage'
+	Then I validate two scenario contexts have equal text 'productNameFromDetailsPage', 'productNameFromBasketPage'
