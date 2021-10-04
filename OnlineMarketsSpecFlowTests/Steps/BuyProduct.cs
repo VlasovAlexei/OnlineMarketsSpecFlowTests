@@ -24,5 +24,12 @@ namespace OnlineMarketsSpecFlowTests.Steps
             website = (Website)_featureContext[tagInfo];
             wait = new WebDriverWait(driverHelper.Driver, TimeSpan.FromSeconds(10));
         }
+
+        [Given(@"I navigate to the website start page")]
+        public void GivenINavigateToTheWebsiteStartPage()
+        {
+            _driverHelper.Driver.Navigate().GoToUrl(website.Url);
+        }
+
     }
 }
