@@ -118,6 +118,9 @@ testRunner.Given("I navigate to the website start page", ((string)(null)), ((Tec
 testRunner.When("I click on search field and enter the product to search \"iPhone 11\" on the start " +
                         "page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
+#line 7
+testRunner.And("I click on first product in the search results on the product list page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
             }
             this.ScenarioCleanup();
         }

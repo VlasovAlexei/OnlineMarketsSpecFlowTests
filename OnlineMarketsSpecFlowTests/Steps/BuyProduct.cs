@@ -38,5 +38,12 @@ namespace OnlineMarketsSpecFlowTests.Steps
             wait.Until(ExpectedConditions.ElementToBeClickable(By.XPath(website.Pages.StartPage.SearchField))).SendKeys(itemForSearch + Keys.Enter);
         }
 
+        [When(@"I click on first product in the search results on the product list page")]
+        public void WhenIClickOnFirstProductInTheSearchResultsOnTheProductListPage()
+        {
+            wait.Until(ExpectedConditions.ElementToBeClickable(By.XPath(website.Pages.ProductListPage.SelectedItem))).Click();
+        }
+
+
     }
 }
