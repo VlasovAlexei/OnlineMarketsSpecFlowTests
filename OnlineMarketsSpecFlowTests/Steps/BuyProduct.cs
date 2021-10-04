@@ -4,6 +4,7 @@ using System.Linq;
 using OpenQA.Selenium.Support.UI;
 using System;
 using OpenQA.Selenium;
+using Xunit;
 
 namespace OnlineMarketsSpecFlowTests.Steps
 {
@@ -73,6 +74,19 @@ namespace OnlineMarketsSpecFlowTests.Steps
             _scenarioContext[_actualResult] = actualResult;
         }
 
+        [Then(@"I validate count of selected product in basket is '(.*)'")]
+        public void ThenIValidateCountOfSelectedProductInBasketIs(int expectedCount)
+        {
+            var actualCount = _driverHelper.Driver.FindElements(By.XPath(website.Pages.BasketPage.NameOfItem)).Count;
+            Assert.Equal(expectedCount, actualCount);
+        }
 
+        [Then(@"I validate two scenario contexts have equal text '(.*)', '(.*)'")]
+        public void ThenIValidateTwoScenarioContextsHaveEqualText(string _expectedResult, string _actualResult)
+        {
+            var expectedResult = (string)_scenarioContext[_expectedResult];
+            var actualResult = (string)_scenarioContext[_actualResult];
+            Assert.Contains(expectedResult, actualResult);
+        }
     }
 }
