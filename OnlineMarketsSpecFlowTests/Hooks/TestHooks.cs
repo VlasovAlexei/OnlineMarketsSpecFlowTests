@@ -1,6 +1,7 @@
-﻿using OpenQA.Selenium.Chrome;
+﻿using Newtonsoft.Json;
+using OpenQA.Selenium.Chrome;
+using System.IO;
 using TechTalk.SpecFlow;
-
 
 namespace OnlineMarketsSpecFlowTests.Hooks
 {
@@ -17,6 +18,7 @@ namespace OnlineMarketsSpecFlowTests.Hooks
         [BeforeScenario]
         public void BeforeScenario()
         {
+            Website configElements = JsonConvert.DeserializeObject<Website>(File.ReadAllText("ConfigFiles\\DNS.json"));
             ChromeOptions option = new ChromeOptions();
             option.AddArguments("start-maximized");
             option.AddArguments("--disable-notifications");
