@@ -1,12 +1,32 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using OpenQA.Selenium.Chrome;
+using TechTalk.SpecFlow;
+
 
 namespace OnlineMarketsSpecFlowTests.Hooks
 {
-    class TestHooks
+    [Binding]
+    public class TestHooks
     {
+        private DriverHelper _driverHelper;
+
+        public TestHooks(DriverHelper driverHelper)
+        {
+            _driverHelper = driverHelper;
+        }
+
+        [BeforeScenario]
+        public void BeforeScenario()
+        {
+            ChromeOptions option = new ChromeOptions();
+            option.AddArguments("start-maximized");
+            option.AddArguments("--disable-notifications");
+            _driverHelper.Driver = new ChromeDriver(option);
+        }
+
+        [AfterScenario]
+        public void AfterScenario()
+        {
+            _driverHelper.Driver.Quit();
+        }
     }
 }

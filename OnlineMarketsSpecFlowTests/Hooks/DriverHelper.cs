@@ -2,7 +2,7 @@
 
 namespace OnlineMarketsSpecFlowTests.Hooks
 {
-    class DriverHelper
+    public class DriverHelper
     {
         public IWebDriver Driver { get; set; }
     }
