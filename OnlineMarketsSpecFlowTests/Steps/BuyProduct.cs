@@ -53,6 +53,7 @@ namespace OnlineMarketsSpecFlowTests.Steps
         }
 
         [When(@"I click on buy button on the product details page")]
+
         public void WhenIClickOnBuyButtonOnTheProductDetailsPage()
         {
             wait.Until(ExpectedConditions.ElementToBeClickable(By.XPath(website.Pages.ProductDetailsPage.AddToBasketButton))).Click();
@@ -71,6 +72,7 @@ namespace OnlineMarketsSpecFlowTests.Steps
     Text.ToLower().Replace(",", string.Empty);
             _scenarioContext[_actualResult] = actualResult;
         }
+
 
     }
 }
