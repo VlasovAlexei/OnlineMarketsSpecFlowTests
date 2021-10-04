@@ -138,6 +138,10 @@ this.ScenarioInitialize(scenarioInfo);
 #line 12
  testRunner.Then("I validate count of selected product in basket is \'1\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
+#line 13
+ testRunner.Then("I validate two scenario contexts have equal text \'productNameFromProductPage\', \'p" +
+                        "roductNameFromBasketPage\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
             }
             this.ScenarioCleanup();
         }

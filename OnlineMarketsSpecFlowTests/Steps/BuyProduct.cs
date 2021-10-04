@@ -81,5 +81,12 @@ namespace OnlineMarketsSpecFlowTests.Steps
             Assert.Equal(expectedCount, actualCount);
         }
 
+        [Then(@"I validate two scenario contexts have equal text '(.*)', '(.*)'")]
+        public void ThenIValidateTwoScenarioContextsHaveEqualText(string _expectedResult, string _actualResult)
+        {
+            var expectedResult = (string)_scenarioContext[_expectedResult];
+            var actualResult = (string)_scenarioContext[_actualResult];
+            Assert.Contains(expectedResult, actualResult);
+        }
     }
 }
