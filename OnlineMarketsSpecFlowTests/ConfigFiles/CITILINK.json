@@ -6,17 +6,17 @@
     },
 
     "ProductListPage": {
-      "SelectedItem": "//div[@class='ProductCardVertical__description ']"
+      "SelectedItem": "//div[@data-index='1']//a[contains(@class,' ProductCardVertical__link')]"
     },
 
     "ProductDetailsPage": {
       "NameOfItem": "//h1[@class = 'Heading Heading_level_1 ProductHeader__title']",
       "AddToBasketButton": "//div[@class ='ProductHeader__buy-block']//span[@class='Button__text jsButton__text']",
-      "BasketButton": "//button[@class='UpsaleBasket__order Button jsButton Button_theme_primary Button_size_m']"
+      "BasketButton": "//div[@class='UpsaleBasket__header-link']//button[contains(@class,'UpsaleBasket__order')]"
     },
 
     "BasketPage": {
-      "NameOfItem": "//a[@class='ProductCardForBasket__name Link js--Link Link_type_default']"
+      "NameOfItem": "//a[@class='ProductCardForBasket__name  Link js--Link Link_type_default']"
     }
   }
 }
