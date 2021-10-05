@@ -119,26 +119,29 @@ this.ScenarioInitialize(scenarioInfo);
                         "page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 7
- testRunner.And("I click on first product in the search results on the product list page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I\'m waiting \"1000\" milliseconds for the page to become static", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 8
+ testRunner.And("I click on first product in the search results on the product list page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 9
  testRunner.And("I get product name from product details page and put it in scenario context by na" +
                         "me \'productNameFromDetailsPage\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 9
+#line 10
  testRunner.And("I click on buy button on the product details page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 10
+#line 11
  testRunner.And("I click on basket button on the product details page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 11
+#line 12
  testRunner.And("I get product name from basket page and put it in scenario context by name \'produ" +
                         "ctNameFromBasketPage\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 12
+#line 13
  testRunner.Then("I validate count of selected product in basket is \'1\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 13
+#line 14
  testRunner.Then("I validate two scenario contexts have equal text \'productNameFromDetailsPage\', \'p" +
                         "roductNameFromBasketPage\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden

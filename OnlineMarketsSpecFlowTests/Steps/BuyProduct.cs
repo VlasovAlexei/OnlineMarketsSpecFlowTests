@@ -5,6 +5,7 @@ using OpenQA.Selenium.Support.UI;
 using System;
 using OpenQA.Selenium;
 using Xunit;
+using System.Threading;
 
 namespace OnlineMarketsSpecFlowTests.Steps
 {
@@ -87,6 +88,12 @@ namespace OnlineMarketsSpecFlowTests.Steps
             var expectedResult = (string)_scenarioContext[_expectedResult];
             var actualResult = (string)_scenarioContext[_actualResult];
             Assert.Contains(expectedResult, actualResult);
+        }
+
+        [When(@"I'm waiting ""(.*)"" milliseconds for the page to become static")]
+        public void WhenIMWaitingMillisecondsForThePageToBecomeStatic(int timeWaiting)
+        {
+            Thread.Sleep(timeWaiting);
         }
     }
 }
