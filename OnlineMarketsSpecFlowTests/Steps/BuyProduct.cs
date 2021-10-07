@@ -49,9 +49,9 @@ namespace OnlineMarketsSpecFlowTests.Steps
         [When(@"I get product name from product details page and put it in scenario context by name '(.*)'")]
         public void WhenIGetProductNameFromProductDetailsPageAndPutItInScenarioContextByName(string _expectedResult)
         {
-            string expectedResult = wait.Until(ExpectedConditions.ElementToBeClickable(By.XPath(website.Pages.ProductDetailsPage.NameOfItem))).
-    Text.ToLower().Replace(",", string.Empty);
-            _scenarioContext[_expectedResult] = expectedResult;
+            var expectedResult = wait.Until(ExpectedConditions.ElementToBeClickable(By.XPath(website.Pages.ProductDetailsPage.NameOfItem)));
+            var expectedResultFormated = expectedResult.Text.ToLower().Replace(",", string.Empty);
+            _scenarioContext[_expectedResult] = expectedResultFormated;
         }
 
         [When(@"I click on buy button on the product details page")]
@@ -70,9 +70,9 @@ namespace OnlineMarketsSpecFlowTests.Steps
         [When(@"I get product name from basket page and put it in scenario context by name '(.*)'")]
         public void WhenIGetProductNameFromBasketPageAndPutItInScenarioContextByName(string _actualResult)
         {
-            var actualResult = wait.Until(ExpectedConditions.ElementToBeClickable(By.XPath(website.Pages.BasketPage.NameOfItem))).
-    Text.ToLower().Replace(",", string.Empty);
-            _scenarioContext[_actualResult] = actualResult;
+            var actualResult = wait.Until(ExpectedConditions.ElementToBeClickable(By.XPath(website.Pages.BasketPage.NameOfItem)));
+            var actualResultFormated = actualResult.Text.ToLower().Replace(",", string.Empty);
+            _scenarioContext[_actualResult] = actualResultFormated;
         }
 
         [Then(@"I validate count of selected product in basket is '(.*)'")]
