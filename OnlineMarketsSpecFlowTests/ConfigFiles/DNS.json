@@ -6,7 +6,7 @@
     },
 
     "ProductListPage": {
-      "SelectedItem": "//div[@data-id='product'][1]"
+      "SelectedItem": "//a[contains(@class,'catalog-product__name')]"
     },
 
     "ProductDetailsPage": {
