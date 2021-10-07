@@ -90,7 +90,7 @@ namespace OnlineMarketsSpecFlowTests.Steps
             Assert.Contains(expectedResult, actualResult);
         }
 
-        [When(@"I'm waiting ""(.*)"" milliseconds for the page to become static")]
+        [When(@"I'm waiting ""(.*)"" milliseconds")]
         public void WhenIMWaitingMillisecondsForThePageToBecomeStatic(int timeWaiting)
         {
             Thread.Sleep(timeWaiting);
