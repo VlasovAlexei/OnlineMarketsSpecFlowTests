@@ -11,7 +11,10 @@
 *.sln.docstates
 
 # User-specific files (MonoDevelop/Xamarin Studio)
-*.userprefs
+*.feature.cs
+
+# Specflow auto generated feature files
+mono_crash.*
 
 # Mono auto generated files
 mono_crash.*
