@@ -34,8 +34,8 @@ namespace OnlineMarketsSpecFlowTests.Steps
             _driverHelper.Driver.Navigate().GoToUrl(website.Url);
         }
 
-        [When(@"I click on search field and enter the product to search ""(.*)"" on the start page")]
-        public void WhenIClickOnSearchFieldAndEnterTheProductToSearchOnTheStartPage(string itemForSearch)
+        [When(@"I enter text '(.*)' to search field and press Enter on the start page")]
+        public void WhenIEnterTextToSearchFieldAndPressEnterOnTheStartPage(string itemForSearch)
         {
             wait.Until(ExpectedConditions.ElementToBeClickable(By.XPath(website.Pages.StartPage.SearchField))).SendKeys(itemForSearch + Keys.Enter);
         }
@@ -75,15 +75,15 @@ namespace OnlineMarketsSpecFlowTests.Steps
             _scenarioContext[_actualResult] = actualResultFormated;
         }
 
-        [Then(@"I validate count of selected product in basket is '(.*)'")]
-        public void ThenIValidateCountOfSelectedProductInBasketIs(int expectedCount)
+        [Then(@"I validate count of products in basket is '(.*)'")]
+        public void ThenIValidateCountOfProductsInBasketIs(int expectedCount)
         {
             var actualCount = _driverHelper.Driver.FindElements(By.XPath(website.Pages.BasketPage.NameOfItem)).Count;
             Assert.Equal(expectedCount, actualCount);
         }
 
-        [Then(@"I validate two scenario contexts have equal text '(.*)', '(.*)'")]
-        public void ThenIValidateTwoScenarioContextsHaveEqualText(string _expectedResult, string _actualResult)
+        [Then(@"I validate equality of two scenario context values by keys: '(.*)' and '(.*)'")]
+        public void ThenIValidateEqualityOfTwoScenarioContextValuesByKeysAnd(string _expectedResult, string _actualResult)
         {
             var expectedResult = (string)_scenarioContext[_expectedResult];
             var actualResult = (string)_scenarioContext[_actualResult];
