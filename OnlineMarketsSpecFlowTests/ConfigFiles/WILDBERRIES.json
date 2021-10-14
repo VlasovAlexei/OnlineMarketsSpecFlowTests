@@ -4,7 +4,7 @@
   {
     "StartPage": 
     {
-      "SearchField": "//input[@class = 'search-catalog__input j-search-input']"
+      "SearchField": "//input[contains(@class,'search-catalog')]"
     },
 
     "ProductListPage": 
