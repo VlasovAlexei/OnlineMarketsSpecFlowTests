@@ -34,10 +34,12 @@ namespace OnlineMarketsSpecFlowTests.Steps
             _driverHelper.Driver.Navigate().GoToUrl(website.Url);
         }
 
-        [When(@"I enter text '(.*)' to search field and press Enter on the start page")]
-        public void WhenIEnterTextToSearchFieldAndPressEnterOnTheStartPage(string itemForSearch)
+        [When(@"I enter text '(.*)' to search field and press Enter")]
+        public void WhenIEnterTextToSearchFieldAndPressEnter(string itemForSearch)
         {
-            wait.Until(ExpectedConditions.ElementToBeClickable(By.XPath(website.Pages.StartPage.SearchField))).SendKeys(itemForSearch + Keys.Enter);
+            var searchField = wait.Until(ExpectedConditions.ElementToBeClickable(By.XPath(website.Pages.StartPage.SearchField)));
+            searchField.Clear();
+            searchField.SendKeys(itemForSearch + Keys.Enter);
         }
 
         [When(@"I click on first product in the search results on the product list page")]

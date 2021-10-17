@@ -3,7 +3,7 @@ Feature: TestingSiteCITILINK
 
 Scenario: BuyOfOneProduct
 	Given I navigate to the website start page
-	When I enter text 'iphone 11' to search field and press Enter on the start page
+	When I enter text 'iphone 11' to search field and press Enter
 	# wait for the page to become static
 	When I'm waiting "1000" milliseconds
 	And I click on first product in the search results on the product list page

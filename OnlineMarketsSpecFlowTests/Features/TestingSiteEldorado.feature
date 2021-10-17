@@ -5,7 +5,7 @@ Scenario: BuyOfOneProduct
 	Given I navigate to the website start page
 	# wait for the page to become static
 	When I'm waiting "3000" milliseconds
-	And I enter text 'iphone 11' to search field and press Enter on the start page
+	And I enter text 'iphone 11' to search field and press Enter
 	And I click on first product in the search results on the product list page
 	And I get product name from product details page and put it in scenario context by name 'productNameFromDetailsPage'
 	And I click on buy button on the product details page
