@@ -14,7 +14,7 @@ Scenario: BuyOfOneProduct
 	Then I validate count of products in basket is '1'
 	Then I validate equality of two scenario context list by keys: 'ItemsInBasket' and 'selectedItems'
 
-	Scenario: BuyOfTwoProduct
+Scenario: BuyOfTwoProduct
 	Given I navigate to the website start page
 	And I create list of 'selectedItem' and put it in scenario context
 	And I create list of 'ItemInBasket' and put it in scenario context
@@ -29,4 +29,25 @@ Scenario: BuyOfOneProduct
 	And I click on basket button on the product details page
 	And I get product name from basket page and add it in 'ItemInBasket' and put it in scenario context
 	Then I validate count of products in basket is '2'
+	Then I validate equality of two scenario context list by keys: 'ItemInBasket' and 'selectedItem'
+
+Scenario: BuyOfThreeProduct
+	Given I navigate to the website start page
+	And I create list of 'selectedItem' and put it in scenario context
+	And I create list of 'ItemInBasket' and put it in scenario context
+	When I enter text 'iphone 11' to search field and press Enter
+	And I click on first product in the search results on the product list page
+	And I get product name from product details page and add it in 'selectedItem' list
+	And I click on buy button on the product details page
+	And I enter text 'iphone 13' to search field and press Enter
+	And I click on first product in the search results on the product list page
+	And I get product name from product details page and add it in 'selectedItem' list
+	And I click on buy button on the product details page
+	And I enter text 'iphone 12' to search field and press Enter
+	And I click on first product in the search results on the product list page
+	And I get product name from product details page and add it in 'selectedItem' list
+	And I click on buy button on the product details page
+	And I click on basket button on the product details page
+	And I get product name from basket page and add it in 'ItemInBasket' and put it in scenario context
+	Then I validate count of products in basket is '3'
 	Then I validate equality of two scenario context list by keys: 'ItemInBasket' and 'selectedItem'
