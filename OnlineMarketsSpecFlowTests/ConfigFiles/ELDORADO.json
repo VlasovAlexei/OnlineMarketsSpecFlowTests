@@ -12,10 +12,9 @@
       "SelectedItem": "//a[@data-dy='title']"
     },
 
-    "ProductDetailsPage": 
-    {
+    "ProductDetailsPage": {
       "NameOfItem": "//h1[@itemprop='name']",
-      "AddToBasketButton": "//div[@class ='priceContainer']//span[@class = 'gtmAddToBasket addToCartBigCP cartButtonText']",
+      "AddToBasketButton": "//div[contains(@class,'priceContainer')]//span[contains(@class,'AddToBasket')]",
       "BasketButton": "//div[@class ='dy-modal-wrapper']//a[@href = '/personal/basket.php']"
     },
 
